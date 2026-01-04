@@ -1,0 +1,17 @@
+{
+    "movie_tagging": {
+        "retrieval_history": "Description: {description} Tag: {tag}\n"
+    },
+    "citation": {
+        "retrieval_history": "Paper Title: {title}\n"
+    },
+    "news_headline": {
+        "retrieval_history": "Article: {text} Headline: {title}\n"
+    },
+    "product_rating": {
+        "retrieval_history": "Review: {text} Score: {score}\n"
+    },
+    "scholarly_title": {
+        "retrieval_history": "abstract: {abstract} title: {title}\n"
+    }
+}

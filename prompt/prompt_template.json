@@ -1,0 +1,27 @@
+{
+    "movie_tagging": {
+        "prompt": "### User Instruction:\nWhich tag does this movie relate to among the following tags? Just answer with the tag name without further explanation. tags: [sci-fi, based on a book, comedy, action, twist ending, dystopia, dark comedy, classic, psychology, fantasy, romance, thought-provoking, social commentary, violence, true story]\nDescription: {} Tag:",
+        "retrieval_history": "Description: {description} Tag: {tag}\n",
+        "retrieval_query_wokey": "Which tag does this movie relate to among the following tags? Just answer with the tag name without further explanation.\n Description: {}"
+    },
+    "citation": {
+        "prompt": "### User Instruction:\nFor an author who has written the paper with the title \"{query_title}\", which reference is related? Just answer with [1] or [2] without explanation.\nReference: [1] - {opt1} [2] - {opt2}\nAnswer:",
+        "retrieval_history": "Paper Title: {title} Citation: {citation}\n",
+        "retrieval_query_wokey": "For an author who has written the paper with the title \"{}\", which reference is related? Just answer with [1] or [2] without explanation."
+    },
+    "news_headline": {
+        "prompt": "### User Instruction:\nGenerate a headline for the following article.\nArticle: {} Headline:",
+        "retrieval_history": "Article: {text} Headline: {title}\n",
+        "retrieval_query_wokey": "Generate a headline for the following article: {}"
+    },
+    "product_rating": {
+        "prompt": "### User Instruction:\nWhat is the score of the following review on a scale of 1 to 5? just answer with 1, 2, 3, 4, or 5 without further explanation.\nReview: {} Score:",
+        "retrieval_history": "Review: {text} Score: {score}\n",
+        "retrieval_query_wokey": "What is the score of the following review on a scale of 1 to 5? review: {}"
+    },
+    "scholarly_title": {
+        "prompt": "### User Instruction:\nGenerate a title for the following abstract of a paper.\nAbstract: {} Title:",
+        "retrieval_history": "abstract: {abstract} title: {title}\n",
+        "retrieval_query_wokey": "Generate a title for the following abstract of a paper: {}"
+    }
+}
