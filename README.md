@@ -1,4 +1,14 @@
-# MTA: Merge-then-Adapt Framework
+# MTA: A Merge-then-Adapt Framework for Personalized Large Language Model
+
+**MTA** is a framework for Personalized Large Language Models (PLLMs) that addresses two key challenges in user-centric LLM adaptation: (1) storage costs that scale linearly with the number of users, and (2) suboptimal performance for users with sparse data. MTA comprises three stages:
+
+1. **Meta-LoRA Bank Construction** — Select anchor users and pre-train meta-personalization traits in meta-LoRA modules.
+2. **Adaptive LoRA Fusion** — Retrieve and dynamically merge the most relevant anchor meta-LoRAs to synthesize a user-specific adapter, eliminating per-user storage.
+3. **LoRA Stacking** — Apply an additional ultra-low-rank LoRA on top of the merged LoRA for effective few-shot personalization.
+
+Experiments on the [LaMP](https://arxiv.org/abs/2304.11406) benchmark demonstrate that MTA outperforms existing SOTA methods across multiple tasks.
+
+**Paper:** [arXiv:2511.20072](https://arxiv.org/abs/2511.20072)
 
 ## Environment Setup
 
@@ -155,4 +165,16 @@ bash run_experiment.sh citation 10
 └── ...
 ```
 
+## Citation
 
+```bibtex
+@misc{li2025mtamergethenadaptframeworkpersonalized,
+      title={MTA: A Merge-then-Adapt Framework for Personalized Large Language Model},
+      author={Xiaopeng Li and Yuanjin Zheng and Wanyu Wang and wenlin zhang and Pengyue Jia and Yiqi Wang and Maolin Wang and Xuetao Wei and Xiangyu Zhao},
+      year={2025},
+      eprint={2511.20072},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2511.20072},
+}
+```
