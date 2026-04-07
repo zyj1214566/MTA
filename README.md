@@ -6,8 +6,6 @@
 2. **Adaptive LoRA Fusion** — Retrieve and dynamically merge the most relevant anchor meta-LoRAs to synthesize a user-specific adapter, eliminating per-user storage.
 3. **LoRA Stacking** — Apply an additional ultra-low-rank LoRA on top of the merged LoRA for effective few-shot personalization.
 
-Experiments on the [LaMP](https://arxiv.org/abs/2304.11406) benchmark demonstrate that MTA outperforms existing SOTA methods across multiple tasks.
-
 **Paper:** [arXiv:2511.20072](https://arxiv.org/abs/2511.20072)
 
 ## Environment Setup
