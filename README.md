@@ -6,9 +6,9 @@
 2. **Adaptive LoRA Fusion** — Retrieve and dynamically merge the most relevant anchor meta-LoRAs to synthesize a user-specific adapter, eliminating per-user storage.
 3. **LoRA Stacking** — Apply an additional ultra-low-rank LoRA on top of the merged LoRA for effective few-shot personalization.
 
-**Paper:** [arXiv:2511.20072](https://arxiv.org/abs/2511.20072)
+**Paper:** [arXiv:2511.20072](https://arxiv.org/abs/2511.20072) | Accepted by **ACL 2026 Main Conference** 🎉
 
-## Environment Setup
+## 🛠️ Environment Setup
 
 Create and activate a new conda environment named MTA:
 
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 **Note:** LlamaFactory will be installed separately in the next step.
 
-### Model Download
+### 📥 Model Download
 
 Download the required models to the `./model` directory:
 
@@ -55,7 +55,7 @@ huggingface-cli download microsoft/deberta-v3-large --local-dir ./model/deberta-
 huggingface-cli download meta-llama/Meta-Llama-3-8B-Instruct --local-dir ./model/Meta-Llama-3-8B-Instruct
 ```
 
-## Dataset
+## 📊 Dataset
 
 We use public available data from the [LaMP](https://arxiv.org/abs/2304.11406) benchmark for anchor selection. The dataset processing approach follows the same methodology as [Per-Pcs](https://arxiv.org/abs/2406.10471).
 
@@ -74,9 +74,9 @@ Each task directory contains:
 - `user_anchor_candidate.json`: Candidate users for anchor selection
 - Test data for evaluation
 
-## Usage
+## 🚀 Usage
 
-### Select Anchor Users
+### 🎯 Select Anchor Users
 ```bash
 python select_anchor.py --candidate_path <data_path> --task_name <task> --k <num_anchors>
 ```
@@ -91,7 +91,7 @@ python select_anchor.py --candidate_path ./data/movie_tagging/user_anchor_candid
 - `--task_name`: Task name (movie_tagging, news_headline, citation, etc.)
 - `--k`: Number of anchor users to select
 
-### Train Meta-LoRA Bank
+### 🧠 Train Meta-LoRA Bank
 
 ```bash
 git clone https://github.com/hiyouga/LLaMA-Factory.git
@@ -112,7 +112,7 @@ bash run_movie_tagging_k1_training.sh
 - `--task_name`: Task name (same as step 1)
 - `--top_k`: Number of history items for BM25 retrieval (default: 1)
 
-### Dense Retrieval Matching
+### 🔍 Dense Retrieval Matching
 ```bash
 python dense_retrieval_matcher.py --task_name <task> --top_k <num_matches>
 ```
@@ -129,7 +129,7 @@ python dense_retrieval_matcher.py --task_name movie_tagging --top_k 2
 
 **Output:** Results saved to `./dense_retrieval_results/{task_name}/matches_results.json`
 
-### Complete MTA Experiment
+### 🧪 Complete MTA Experiment
 
 After completing the above three steps, you can run the complete MTA experiment using the unified script:
 
@@ -163,7 +163,7 @@ bash run_experiment.sh citation 10
 └── ...
 ```
 
-## Citation
+## 📝 Citation
 
 ```bibtex
 @misc{li2025mtamergethenadaptframeworkpersonalized,
